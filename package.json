@@ -1,0 +1,16 @@
+{
+  "name": "vibecodingtest",
+  "version": "1.0.0",
+  "description": "A project integrated with GitHub, Vercel, and Render",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "start": "node index.js",
+    "build": "echo 'Build script for production'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {}
+}
