@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPA Calculator (API Version)</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>CPA Calculator</h1>
+            <p class="subtitle">Your intelligent CPA assistant - API Integrated</p>
+        </header>
+        
+        <div class="spreadsheet-input-section">
+            <div class="spreadsheet-input-container">
+                <label for="spreadsheetUrl">Google Spreadsheet URL:</label>
+                <div class="url-input-wrapper">
+                    <input 
+                        type="url" 
+                        id="spreadsheetUrl" 
+                        class="spreadsheet-url-input" 
+                        placeholder="https://docs.google.com/spreadsheets/d/..."
+                    />
+                    <button id="connectButton" class="connect-button">Connect</button>
+                </div>
+                <span class="connection-status" id="connectionStatus"></span>
+            </div>
+        </div>
+        
+        <main class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message assistant-message">
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-content">
+                        <p>Hello! I'm your CPA Calculator assistant powered by AI. I can help you with:</p>
+                        <ul>
+                            <li>Cost Per Acquisition calculations</li>
+                            <li>Marketing budget analysis</li>
+                            <li>ROI calculations</li>
+                            <li>Campaign performance metrics</li>
+                        </ul>
+                        <p>Please connect your Google Spreadsheet above to get started with real-time data analysis!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input-container">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="messageInput" 
+                        class="message-input" 
+                        placeholder="Type your message here..."
+                        rows="1"
+                    ></textarea>
+                    <button id="sendButton" class="send-button" aria-label="Send message">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 2L11 13M22 2L15 22L11 13L2 9L22 2Z"/>
+                        </svg>
+                    </button>
+                </div>
+                <p class="input-hint">Press Enter to send, Shift+Enter for new line</p>
+            </div>
+        </main>
+    </div>
+    
+    <script src="/js/app-api.js"></script>
+</body>
+</html>

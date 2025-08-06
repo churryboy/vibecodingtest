@@ -5,12 +5,22 @@
   "main": "index.js",
   "scripts": {
     "dev": "node index.js",
+    "dev:api": "node server.js",
     "start": "node index.js",
-    "build": "echo 'Build script for production'"
+    "start:api": "node server.js",
+    "build": "echo 'Build script for production'",
+    "demo": "git checkout demo-version && node index.js",
+    "production": "git checkout master && node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.58.0",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "googleapis": "^155.0.0"
+  }
 }
